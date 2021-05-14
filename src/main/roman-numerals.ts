@@ -1,22 +1,28 @@
-export const romanNumeral = (number: number): string => {
-    let romanNumeral = "";
+export const romanNumeral = (input: number): string => {
+    const numberToNumeral = [
+        { number: 10, numeral: "X" },
+        { number: 5, numeral: "V" },
+        { number: 1, numeral: "I" }
+    ]
 
-    if ((number + 1) % 10 === 0) {
+    let output = "";
+
+    if ((input + 1) % 10 === 0) {
         return "IX"
     }
-    if ((number + 1) % 5 === 0) {
+
+    if ((input + 1) % 5 === 0) {
         return "IV"
     }
 
-    while (number >= 1) {
-        if (number >= 5) {
-            romanNumeral += "V";
-            number -= 5;
-        } else {
-            romanNumeral += "I";
-            number -= 1;
-        }
+    while (input >= 1) {
+        numberToNumeral.forEach(({ number, numeral}) => {
+           if (input >= number) {
+               output += numeral;
+               input -= number
+           }
+        });
     }
 
-    return romanNumeral;
+    return output;
 };

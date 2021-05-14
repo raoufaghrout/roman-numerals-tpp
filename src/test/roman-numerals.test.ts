@@ -14,6 +14,10 @@ describe('Roman Numeral', () => {
     ${8}        | ${"VIII"}
     ${9}        | ${"IX"}
     ${10}       | ${"X"}
+    ${11}       | ${"XI"}
+    ${12}       | ${"XII"}
+    ${13}       | ${"XIII"}
+    ${14}       | ${"XIV"}
   `('should return roman numeral: $outputRomanNumeral for number: $inputNumber', ({inputNumber, outputRomanNumeral}) => {
         expect(romanNumeral(inputNumber)).toEqual(outputRomanNumeral);
     });
