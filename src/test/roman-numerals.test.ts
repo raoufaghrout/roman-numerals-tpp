@@ -1,8 +1,11 @@
+import {romanNumeral} from "../main/roman-numerals";
+
 describe('Roman Numeral', () => {
     it.each`
-    number | romanNumeral
+    inputNumber | OutputRomanNumeral
     ${0}   | ${""}
-  `('should return roman numeral: $romanNumeral for number: $number', ({number, romanNumeral}) => {
-        expect(romanNumeral(number)).toEqual(romanNumeral);
+    ${1}   | ${"I"}
+  `('should return roman numeral: $OutputRomanNumeral for number: $inputNumber', ({inputNumber, OutputRomanNumeral}) => {
+        expect(romanNumeral(inputNumber)).toEqual(OutputRomanNumeral);
     });
 })
