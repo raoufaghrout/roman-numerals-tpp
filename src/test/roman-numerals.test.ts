@@ -6,6 +6,8 @@ describe('Roman Numeral', () => {
     ${0}        | ${""}
     ${1}        | ${"I"}
     ${2}        | ${"II"}
+    ${3}        | ${"III"}
+    ${4}        | ${"IV"}
   `('should return roman numeral: $outputRomanNumeral for number: $inputNumber', ({inputNumber, outputRomanNumeral}) => {
         expect(romanNumeral(inputNumber)).toEqual(outputRomanNumeral);
     });
