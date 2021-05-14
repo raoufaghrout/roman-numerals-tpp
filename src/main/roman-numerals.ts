@@ -1,6 +1,9 @@
 export const romanNumeral = (number: number): string => {
     let romanNumeral = "";
 
+    if ((number + 1) % 10 === 0) {
+        return "IX"
+    }
     if ((number + 1) % 5 === 0) {
         return "IV"
     }
