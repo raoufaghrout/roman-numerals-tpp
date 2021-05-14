@@ -1,4 +1,8 @@
 
 export const romanNumeral = (number: number): string => {
-    return ""
+    let romanNumeral = "";
+
+    if (number >= 1) return romanNumeral + "I";
+
+    return romanNumeral
 };
