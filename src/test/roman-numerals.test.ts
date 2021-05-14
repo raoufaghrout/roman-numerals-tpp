@@ -18,6 +18,17 @@ describe('Roman Numeral', () => {
     ${12}       | ${"XII"}
     ${13}       | ${"XIII"}
     ${14}       | ${"XIV"}
+    ${15}       | ${"XV"}
+    ${16}       | ${"XVI"}
+    ${17}       | ${"XVII"}
+    ${18}       | ${"XVIII"}
+    ${19}       | ${"XIX"}
+    ${20}       | ${"XX"}
+    ${21}       | ${"XXI"}
+    ${24}       | ${"XXIV"}
+    ${29}       | ${"XXIX"}
+    ${39}       | ${"XXXIX"}
+    ${40}       | ${"XL"}
   `('should return roman numeral: $outputRomanNumeral for number: $inputNumber', ({inputNumber, outputRomanNumeral}) => {
         expect(romanNumeral(inputNumber)).toEqual(outputRomanNumeral);
     });
